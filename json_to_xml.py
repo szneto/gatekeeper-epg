@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
 def fetch_json():
-    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(161_2063+16_1868+16_1940+14_1899)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
+    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(1_2113+11_2063+18_2214+20_2077+20_2091+28_1987+133_563+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
     start_date = datetime.now(timezone.utc)
     end_date = start_date + timedelta(days=5)
     
@@ -34,10 +34,26 @@ def convert_to_xml(json_data):
     })
     
     channels = {
+        "563": "Globo-SP",
+        "1004": "Record-SP",
+        "858": "SBT-SP",
+        "545": "Band-SP",
+        "1044": "Cultura-SP",
+        "1420": "Rede-TV-SP",
+        "1656": "Rede-Vida",
+        "1292": "Gazeta-SP",
         "2063": "TV-Clube-HD",
         "1868": "EPTV-RP",
         "1940": "SBT-RP",
         "1899": "Record-Int-SP"
+        "2077": "TV-TEM-Sor",
+        "2091": "TV-Sorocaba",
+        "2063": "Band-Campinas",
+        "2214": "Record-Paulista",
+        "1642": "RBI-TV",
+        "2113": "Rede-Gospel",
+        "1177": "TV-Aparecida",
+        "1987": "TV-Evangelizar",
     }
     
     for channel_id, channel_name in channels.items():
