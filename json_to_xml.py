@@ -14,18 +14,34 @@ def fetch_json():
     print(f"Programas encontrados: {len(data.get('response', {}).get('docs', []))}")
     return data
 
+import time  # Adicionar essa importação no topo
+
 def fetch_program_descriptions(program_ids):
     if not program_ids:
         return {}
-    
+
     query = "+".join(program_ids)
     url = f"https://programacao.claro.com.br/gatekeeper/prog/select?q=id_programa:({query})&start=0&wt=json&rows=100000&fl=id_programa descricao"
-    response = requests.get(url)
-    data = response.json()
     
-    descriptions = {item["id_programa"]: item["descricao"] for item in data.get("response", {}).get("docs", [])}
-    print(f"Descrições encontradas: {len(descriptions)}")
-    return descriptions
+    print(f"🔍 Buscando descrições: {url}")  # Para depuração
+
+    response = requests.get(url)
+    
+    # Verifica se a resposta é válida antes de tentar converter para JSON
+    if response.status_code != 200 or not response.text.strip():
+        print(f"⚠️ Erro na requisição para {url} - Status: {response.status_code}")
+        return {}
+    
+    try:
+        data = response.json()
+        descriptions = {item["id_programa"]: item["descricao"] for item in data.get("response", {}).get("docs", [])}
+        print(f"📄 Descrições encontradas: {len(descriptions)}")
+        return descriptions
+    except requests.exceptions.JSONDecodeError as e:
+        print(f"❌ Erro ao processar JSON da URL {url}: {e}")
+        return {}
+
+    time.sleep(30)  # Aguarda para evitar bloqueios do servidor
 
 def convert_to_xml(json_data):
     root = ET.Element("tv", attrib={
@@ -45,7 +61,7 @@ def convert_to_xml(json_data):
         "2063": "TV-Clube-HD",
         "1868": "EPTV-RP",
         "1940": "SBT-RP",
-        "1899": "Record-Int-SP"
+        "1899": "Record-Int-SP",
         "2077": "TV-TEM-Sor",
         "2091": "TV-Sorocaba",
         "2063": "Band-Campinas",
