@@ -20,7 +20,7 @@ jobs:
         run: python json_to_xml.py
 
       - name: Mover XML para /docs
-        run: mv tv_guide.xml docs/tv_guide.xml
+        run: mv clarotv.xml docs/clarotv.xml
 
       - name: Commit e push do XML
         run: |
