@@ -13,9 +13,6 @@ jobs:
       - name: Clonar repositório
         uses: actions/checkout@v3
 
-      - name: Instalar dependências
-        run: pip install -r requirements.txt
-
       - name: Executar script
         run: python json_to_xml.py
 
@@ -26,6 +23,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add docs/tv_guide.xml
+          git add docs/clarotv.xml
           git commit -m "Atualização automática do XML" || echo "Nenhuma alteração"
           git push
