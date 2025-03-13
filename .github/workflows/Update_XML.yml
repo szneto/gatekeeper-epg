@@ -1,0 +1,31 @@
+name: Update XML
+
+on:
+  schedule:
+    - cron: '0 0 */4 * *'  # Executa a cada 4 dias às 00:00 UTC
+  workflow_dispatch:  # Permite execução manual
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Executar script
+        run: python json_to_xml.py
+
+      - name: Mover XML para /docs
+        run: mv tv_guide.xml docs/tv_guide.xml
+
+      - name: Commit e push do XML
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/tv_guide.xml
+          git commit -m "Atualização automática do XML" || echo "Nenhuma alteração"
+          git push
