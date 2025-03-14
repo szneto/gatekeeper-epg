@@ -1,10 +1,12 @@
 import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
+import time
+import math
 
 def fetch_json():
-    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(1_2113+11_2063+18_2214+20_2077+20_2091+28_1987+133_563+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
-    start_date = datetime.now(timezone.utc)
+    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(1_2113+19_408+18_2214+20_2077+20_2091+28_1987+133_563+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
+    start_date = datetime.now(timezone.utc).date()
     end_date = start_date + timedelta(days=5)
     
     url = url.replace("dh_inicio:[2025-3-13T00:00:00Z+TO+2025-3-17T23:59:00Z]", f"dh_inicio:[{start_date.strftime('%Y-%m-%dT00:00:00Z')}+TO+{end_date.strftime('%Y-%m-%dT23:59:00Z')}]")
@@ -14,34 +16,38 @@ def fetch_json():
     print(f"Programas encontrados: {len(data.get('response', {}).get('docs', []))}")
     return data
 
-import time  # Adicionar essa importação no topo
+def fetch_program_descriptions(channel_name, daily_programs):
+    descriptions = {}
 
-def fetch_program_descriptions(program_ids):
-    if not program_ids:
-        return {}
+    for day, program_ids in daily_programs.items():
+        chunk_size = 50  # Divide em partes menores para evitar limite do servidor
+        chunks = [program_ids[i:i + chunk_size] for i in range(0, len(program_ids), chunk_size)]
+        total_chunks = len(chunks)
 
-    query = "+".join(program_ids)
-    url = f"https://programacao.claro.com.br/gatekeeper/prog/select?q=id_programa:({query})&start=0&wt=json&rows=100000&fl=id_programa descricao"
-    
-    print(f"🔍 Buscando descrições: {url}")  # Para depuração
+        for index, chunk in enumerate(chunks, start=1):
+            print(f"🔍 Buscando descrições {channel_name} - Dia {day} - Parte {index}/{total_chunks} ({len(chunk)} programas)")
 
-    response = requests.get(url)
-    
-    # Verifica se a resposta é válida antes de tentar converter para JSON
-    if response.status_code != 200 or not response.text.strip():
-        print(f"⚠️ Erro na requisição para {url} - Status: {response.status_code}")
-        return {}
-    
-    try:
-        data = response.json()
-        descriptions = {item["id_programa"]: item["descricao"] for item in data.get("response", {}).get("docs", [])}
-        print(f"📄 Descrições encontradas: {len(descriptions)}")
-        return descriptions
-    except requests.exceptions.JSONDecodeError as e:
-        print(f"❌ Erro ao processar JSON da URL {url}: {e}")
-        return {}
+            query = "+".join(chunk)
+            url = f"https://programacao.claro.com.br/gatekeeper/prog/select?q=id_programa:({query})&start=0&wt=json&rows=100000&fl=id_programa descricao"
 
-    time.sleep(30)  # Aguarda para evitar bloqueios do servidor
+            response = requests.get(url)
+
+            if response.status_code != 200 or not response.text.strip():
+                print(f"⚠️ Erro na requisição para {channel_name} - Dia {day} - Parte {index}/{total_chunks} - Status: {response.status_code}")
+                time.sleep(5)
+                continue
+
+            try:
+                data = response.json()
+                for item in data.get("response", {}).get("docs", []):
+                    descriptions[item["id_programa"]] = item["descricao"]
+
+            except requests.exceptions.JSONDecodeError as e:
+                print(f"❌ Erro ao processar JSON para {channel_name} - Dia {day} - Parte {index}/{total_chunks}: {e}")
+
+            time.sleep(2)
+
+    return descriptions
 
 def convert_to_xml(json_data):
     root = ET.Element("tv", attrib={
@@ -64,36 +70,46 @@ def convert_to_xml(json_data):
         "1899": "Record-Int-SP",
         "2077": "TV-TEM-Sor",
         "2091": "TV-Sorocaba",
-        "2063": "Band-Campinas",
+        "408": "Band-Campinas",
         "2214": "Record-Paulista",
         "1642": "RBI-TV",
         "2113": "Rede-Gospel",
         "1177": "TV-Aparecida",
         "1987": "TV-Evangelizar",
     }
-    
+
     for channel_id, channel_name in channels.items():
         channel = ET.SubElement(root, "channel", attrib={"id": channel_name})
         ET.SubElement(channel, "display-name", attrib={"lang": "pt"}).text = channel_name
-    
+
     programmes = json_data.get("response", {}).get("docs", [])
     if not programmes:
         print("Aviso: Nenhum programa encontrado no JSON.")
         return ET.ElementTree(root)
-    
-    channel_programs = {ch: [] for ch in channels.keys()}
+
+    start_date = datetime.utcnow().date()
+    valid_dates = { (start_date + timedelta(days=i)).isoformat() for i in range(5) }
+
+    channel_programs = {ch: {} for ch in channels.keys()}
     for program in programmes:
         channel_id = str(program.get("id_canal", "2063"))
-        if channel_id in channel_programs:
-            channel_programs[channel_id].append(program.get("id_programa", ""))
-    
-    channel_descriptions = {ch: fetch_program_descriptions(prog_ids) for ch, prog_ids in channel_programs.items()}
-    
+        day = program["dh_inicio"][:10]  # Extrai a data no formato YYYY-MM-DD
+
+        if channel_id in channel_programs and day in valid_dates:
+            if day not in channel_programs[channel_id]:
+                channel_programs[channel_id][day] = []
+            channel_programs[channel_id][day].append(program.get("id_programa", ""))
+
+    channel_descriptions = {
+        ch: fetch_program_descriptions(channels[ch], daily_programs)
+        for ch, daily_programs in channel_programs.items()
+    }
+
     for program in programmes:
         try:
             start_dt = datetime.strptime(program["dh_inicio"], "%Y-%m-%dT%H:%MZ")
             stop_dt = datetime.strptime(program["dh_fim"], "%Y-%m-%dT%H:%MZ")
-            
+
             start = start_dt.strftime("%Y%m%d%H%M%S") + " -0300"
             stop = stop_dt.strftime("%Y%m%d%H%M%S") + " -0300"
             channel_id = str(program.get("id_canal", "2063"))
@@ -104,18 +120,18 @@ def convert_to_xml(json_data):
         except ValueError as e:
             print(f"Erro ao converter datas: {e}, programa: {program}")
             continue
-        
+
         prog = ET.SubElement(root, "programme", attrib={
             "start": start,
             "stop": stop,
             "channel": channel_name
         })
         ET.SubElement(prog, "title", attrib={"lang": "pt"}).text = program.get("titulo", "Sem Título")
-        
+
         prog_id = program.get("id_programa", "")
         if prog_id in channel_descriptions.get(channel_id, {}):
             ET.SubElement(prog, "sub-title", attrib={"lang": "pt"}).text = channel_descriptions[channel_id][prog_id]
-        
+
         desc_text = []
         if "diretor" in program:
             desc_text.append(f"Diretor: {program['diretor']}")
@@ -123,9 +139,9 @@ def convert_to_xml(json_data):
             desc_text.append(f"Elenco: {program['elenco']}")
         if "genero" in program:
             desc_text.append(f"Gênero: {program['genero']}")
-        
+
         ET.SubElement(prog, "desc", attrib={"lang": "pt"}).text = "\n".join(desc_text) if desc_text else "Sem Descrição"
-    
+
     return ET.ElementTree(root)
 
 def save_xml(tree, filename="clarotv.xml"):
