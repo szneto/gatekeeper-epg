@@ -22,7 +22,7 @@ jobs:
       - name: Mover clarotv.xml para /docs
         run: mv clarotv.xml docs/clarotv.xml
 
-      - name: Mover epg.xml para /docs
+      - name: Mover generic_epg.xml para /docs
         run: mv generic_epg.xml docs/generic_epg.xml
 
       - name: Commit e push dos arquivos XML
