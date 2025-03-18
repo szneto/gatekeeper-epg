@@ -69,9 +69,6 @@ def convert_to_xml(json_data):
         "2113": "Rede Gospel",
         "1177": "TV Aparecida",
         "1987": "TV Evangelizar",
-        "9991": "Top TV",
-        "9992": "Rede Mais Família",
-        "9993": "TVT"
     }
     
     for channel_id, channel_name in channels.items():
