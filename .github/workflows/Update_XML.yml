@@ -13,16 +13,22 @@ jobs:
       - name: Clonar repositório
         uses: actions/checkout@v3
 
-      - name: Executar script
+      - name: Executar script json_to_xml.py
         run: python json_to_xml.py
 
-      - name: Mover XML para /docs
+      - name: Executar script epg_generico.py
+        run: python epg_generico.py
+
+      - name: Mover clarotv.xml para /docs
         run: mv clarotv.xml docs/clarotv.xml
 
-      - name: Commit e push do XML
+      - name: Mover epg.xml para /docs
+        run: mv generic_epg.xml docs/generic_epg.xml
+
+      - name: Commit e push dos arquivos XML
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add docs/clarotv.xml
-          git commit -m "Atualização automática do XML" || echo "Nenhuma alteração"
+          git add docs/clarotv.xml docs/generic_epg.xml
+          git commit -m "Atualização automática dos arquivos XML" || echo "Nenhuma alteração"
           git push
