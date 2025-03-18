@@ -86,23 +86,31 @@ def convert_to_xml(json_data):
         if channel_id not in channels:
             continue
         
-        start = program["dh_inicio"].replace("-", "").replace(":", "").replace("T", "") + " +0000"
-        stop = program["dh_fim"].replace("-", "").replace(":", "").replace("T", "") + " +0000"
+        start = program["dh_inicio"].replace("-", "").replace(":", "").replace("T", "").replace("Z", "") + " -0300"
+        stop = program["dh_fim"].replace("-", "").replace(":", "").replace("T", "").replace("Z", "") + " -0300"
         prog = ET.SubElement(root, "programme", attrib={"start": start, "stop": stop, "channel": channels[channel_id]})
         ET.SubElement(prog, "title", attrib={"lang": "pt"}).text = program.get("titulo", "Sem Título")
         
+        # Adiciona a descrição apenas se existir
         if program["id_programa"] in programme_descriptions:
-            ET.SubElement(prog, "sub-title").text = programme_descriptions[program["id_programa"]]
+            sub_title_text = programme_descriptions[program["id_programa"]].strip()
+            if sub_title_text:
+                ET.SubElement(prog, "sub-title").text = sub_title_text
+
+        # Adiciona créditos apenas se existir diretor ou elenco
+        if "diretor" in program or "elenco" in program:
+            credits = ET.SubElement(prog, "credits")
+            if "diretor" in program and program["diretor"].strip():
+                ET.SubElement(credits, "director").text = program["diretor"].strip()
+            if "elenco" in program and program["elenco"].strip():
+                for actor in program["elenco"].split(","):
+                    actor_name = actor.strip()
+                    if actor_name:
+                        ET.SubElement(credits, "actor").text = actor_name
         
-        credits = ET.SubElement(prog, "credits")
-        if "diretor" in program:
-            ET.SubElement(credits, "director").text = program["diretor"]
-        if "elenco" in program:
-            for actor in program["elenco"].split(","):
-                ET.SubElement(credits, "actor", attrib={"role": "Unknown"}).text = actor.strip()
-        
-        if "genero" in program:
-            ET.SubElement(prog, "category").text = program["genero"]
+        # Adiciona categoria apenas se existir gênero
+        if "genero" in program and program["genero"].strip():
+            ET.SubElement(prog, "category").text = program["genero"].strip()
     
     return ET.ElementTree(root)
 
