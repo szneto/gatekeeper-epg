@@ -2,10 +2,9 @@ import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 import time
-import math
 
 def fetch_json():
-    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(1_2113+19_408+18_2214+20_2077+20_2091+28_1987+133_563+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
+    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(1_435+1_2113+19_408+18_2214+20_2077+20_2091+28_1987+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
     start_date = datetime.now(timezone.utc)
     end_date = start_date + timedelta(days=5)
     
@@ -16,49 +15,30 @@ def fetch_json():
     print(f"Programas encontrados: {len(data.get('response', {}).get('docs', []))}")
     return data
 
-def generate_generic_epg(channel_name, channel_id, root):
-    start_date = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0)
-    for day in range(5):
-        for hour in range(24):
-            start_time = start_date + timedelta(days=day, hours=hour)
-            stop_time = start_time + timedelta(hours=1)
-            
-            prog = ET.SubElement(root, "programme", attrib={
-                "start": start_time.strftime("%Y%m%d%H%M%S") + " +0000",
-                "stop": stop_time.strftime("%Y%m%d%H%M%S") + " +0000",
-                "channel": channel_id
-            })
-            ET.SubElement(prog, "title", attrib={"lang": "pt"}).text = f"Programação ({channel_name})"
-
-def fetch_program_descriptions(channel_name, daily_programs):
+def fetch_program_descriptions(program_ids):
     descriptions = {}
-    
-    for day, program_ids in daily_programs.items():
-        chunk_size = 50
-        chunks = [program_ids[i:i + chunk_size] for i in range(0, len(program_ids), chunk_size)]
-        total_chunks = len(chunks)
+    chunk_size = 50
+    chunks = [program_ids[i:i + chunk_size] for i in range(0, len(program_ids), chunk_size)]
 
-        for index, chunk in enumerate(chunks, start=1):
-            print(f"🔍 Buscando descrições {channel_name} - Dia {day} - Parte {index}/{total_chunks} ({len(chunk)} programas)")
-            
-            query = "+".join(chunk)
-            url = f"https://programacao.claro.com.br/gatekeeper/prog/select?q=id_programa:({query})&start=0&wt=json&rows=100000&fl=id_programa descricao"
-            
-            response = requests.get(url)
-            
-            if response.status_code != 200 or not response.text.strip():
-                print(f"⚠️ Erro na requisição para {channel_name} - Dia {day} - Parte {index}/{total_chunks} - Status: {response.status_code}")
-                time.sleep(5)
-                continue
-            
-            try:
-                data = response.json()
-                for item in data.get("response", {}).get("docs", []):
-                    descriptions[item["id_programa"]] = item["descricao"]
-            except requests.exceptions.JSONDecodeError as e:
-                print(f"❌ Erro ao processar JSON para {channel_name} - Dia {day} - Parte {index}/{total_chunks}: {e}")
-            
-            time.sleep(5)
+    for index, chunk in enumerate(chunks, start=1):
+        print(f"🔍 Buscando descrições - Parte {index}/{len(chunks)} ({len(chunk)} programas)")
+        query = "+".join(chunk)
+        url = f"https://programacao.claro.com.br/gatekeeper/prog/select?q=id_programa:({query})&start=0&wt=json&rows=100000&fl=id_programa descricao"
+        
+        response = requests.get(url)
+        if response.status_code != 200 or not response.text.strip():
+            print(f"⚠️ Erro na requisição - Parte {index}/{len(chunks)} - Status: {response.status_code}")
+            time.sleep(1)
+            continue
+        
+        try:
+            data = response.json()
+            for item in data.get("response", {}).get("docs", []):
+                descriptions[item["id_programa"]] = item["descricao"]
+        except requests.exceptions.JSONDecodeError as e:
+            print(f"❌ Erro ao processar JSON - Parte {index}/{len(chunks)}: {e}")
+        
+        time.sleep(1)
     
     return descriptions
 
@@ -69,37 +49,60 @@ def convert_to_xml(json_data):
     })
     
     channels = {
-        "563": "Globo-SP",
-        "1004": "Record-SP",
-        "858": "SBT-SP",
-        "545": "Band-SP",
-        "1044": "Cultura-SP",
-        "1420": "Rede-TV-SP",
-        "1656": "Rede-Vida",
-        "1292": "Gazeta-SP",
-        "2063": "TV-Clube-HD",
-        "1868": "EPTV-RP",
-        "1940": "SBT-RP",
-        "1899": "Record-Int-SP",
-        "2077": "TV-TEM-Sor",
-        "2091": "TV-Sorocaba",
-        "408": "Band-Campinas",
-        "2214": "Record-Paulista",
-        "1642": "RBI-TV",
-        "2113": "Rede-Gospel",
-        "1177": "TV-Aparecida",
-        "1987": "TV-Evangelizar",
-        "9991": "Top-TV",
-        "9992": "Rede-Mais-Familia",
+        "435": "Globo SP",
+        "1004": "Record SP",
+        "858": "SBT SP",
+        "545": "Band SP",
+        "1044": "Cultura SP",
+        "1420": "Rede TV SP",
+        "1656": "Rede Vida",
+        "1292": "Gazeta SP",
+        "2063": "TV Clube HD",
+        "1868": "EPTV RP",
+        "1940": "SBT RP",
+        "1899": "Record Int SP",
+        "2077": "TV TEM Sor",
+        "2091": "TV Sorocaba",
+        "408": "Band Campinas",
+        "2214": "Record Paulista",
+        "1642": "RBI TV",
+        "2113": "Rede Gospel",
+        "1177": "TV Aparecida",
+        "1987": "TV Evangelizar",
+        "9991": "Top TV",
+        "9992": "Rede Mais Família",
         "9993": "TVT"
     }
     
     for channel_id, channel_name in channels.items():
         channel = ET.SubElement(root, "channel", attrib={"id": channel_name})
         ET.SubElement(channel, "display-name", attrib={"lang": "pt"}).text = channel_name
+    
+    programme_data = json_data.get("response", {}).get("docs", [])
+    programme_descriptions = fetch_program_descriptions([p["id_programa"] for p in programme_data if "id_programa" in p])
+    
+    for program in programme_data:
+        channel_id = str(program.get("id_canal"))
+        if channel_id not in channels:
+            continue
         
-        if channel_id in ["9991", "9992", "9993"]:
-            generate_generic_epg(channel_name, channel_name, root)
+        start = program["dh_inicio"].replace("-", "").replace(":", "").replace("T", "") + " +0000"
+        stop = program["dh_fim"].replace("-", "").replace(":", "").replace("T", "") + " +0000"
+        prog = ET.SubElement(root, "programme", attrib={"start": start, "stop": stop, "channel": channels[channel_id]})
+        ET.SubElement(prog, "title", attrib={"lang": "pt"}).text = program.get("titulo", "Sem Título")
+        
+        if program["id_programa"] in programme_descriptions:
+            ET.SubElement(prog, "sub-title").text = programme_descriptions[program["id_programa"]]
+        
+        credits = ET.SubElement(prog, "credits")
+        if "diretor" in program:
+            ET.SubElement(credits, "director").text = program["diretor"]
+        if "elenco" in program:
+            for actor in program["elenco"].split(","):
+                ET.SubElement(credits, "actor", attrib={"role": "Unknown"}).text = actor.strip()
+        
+        if "genero" in program:
+            ET.SubElement(prog, "category").text = program["genero"]
     
     return ET.ElementTree(root)
 
