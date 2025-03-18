@@ -45,7 +45,7 @@ def gerar_epg(canais, dias=5):
     xml_pretty = minidom.parseString(xml_str).toprettyxml(indent="  ", encoding="UTF-8")
     
     # Escreve o arquivo XML formatado
-    with open("epg.xml", "wb") as f:
+    with open("generic_epg.xml", "wb") as f:
         f.write(xml_pretty)
 
 # Executa a função para gerar o EPG
