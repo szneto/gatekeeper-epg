@@ -19,8 +19,8 @@ jobs:
       - name: Executar script epg_generico.py
         run: python epg_generico.py
 
-      - name: Mover clarotv.xml para /docs
-        run: mv clarotv.xml docs/clarotv.xml
+      - name: Mover revel.xml para /docs
+        run: mv revel.xml docs/revel.xml
 
       - name: Mover generic_epg.xml para /docs
         run: mv generic_epg.xml docs/generic_epg.xml
@@ -29,6 +29,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add docs/clarotv.xml docs/generic_epg.xml
+          git add docs/revel.xml docs/generic_epg.xml
           git commit -m "Atualização automática dos arquivos XML" || echo "Nenhuma alteração"
           git push
