@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 import time
 
 def fetch_json():
-    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(1_435+1_2113+19_408+18_2214+20_2077+20_2091+28_1987+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
+    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(1_435+1_2113+19_408+18_2214+20_2077+20_2091+28_1987+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899+46_2084+46_2089+46_2091+46_2142)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
     start_date = datetime.now(timezone.utc)
     end_date = start_date + timedelta(days=5)
     
@@ -69,6 +69,10 @@ def convert_to_xml(json_data):
         "2113": "Rede Gospel",
         "1177": "TV Aparecida",
         "1987": "TV Evangelizar",
+        "2084": "Record RS",
+        "2089": "TV Pampa",
+        "2091": "SBT RS",
+        "2142": "RBS TV",
     }
     
     for channel_id, channel_name in channels.items():
