@@ -111,7 +111,7 @@ def convert_to_xml(json_data):
     
     return ET.ElementTree(root)
 
-def save_xml(tree, filename="clarotv.xml"):
+def save_xml(tree, filename="revel.xml"):
     import xml.dom.minidom
     xml_str = ET.tostring(tree.getroot(), encoding="utf-8")
     parsed_xml = xml.dom.minidom.parseString(xml_str)
@@ -122,4 +122,4 @@ if __name__ == "__main__":
     json_data = fetch_json()
     xml_tree = convert_to_xml(json_data)
     save_xml(xml_tree)
-    print("XML salvo como clarotv.xml")
+    print("XML salvo como revel.xml")
