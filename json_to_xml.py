@@ -104,11 +104,11 @@ def convert_to_xml(json_data):
 
         ET.SubElement(prog, "title", attrib={"lang": "pt"}).text = program.get("titulo", "Sem Título")
         
-        # Sub-title
+        # Description
         if program["id_programa"] in programme_descriptions:
-            sub_title_text = programme_descriptions[program["id_programa"]].strip()
-            if sub_title_text:
-                ET.SubElement(prog, "sub-title").text = sub_title_text
+            desc_text = programme_descriptions[program["id_programa"]].strip()
+            if desc_text:
+                ET.SubElement(prog, "desc", attrib={"lang": "pt"}).text = desc_text
 
         # Credits
         if "diretor" in program or "elenco" in program:
@@ -139,3 +139,4 @@ if __name__ == "__main__":
     xml_tree = convert_to_xml(json_data)
     save_xml(xml_tree)
     print("XML salvo como clarotv.xml")
+
