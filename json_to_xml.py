@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 import time
 
 def fetch_json():
-    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(96_1953+96_1908+96_2068+27_1954+27_1826+27_1909+327_1866+1_435+1_2113+19_408+18_2214+20_2077+20_2091+28_1987+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899+46_2063+46_2084+46_2089+46_2091+46_2142)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
+    url = "https://programacao.claro.com.br/gatekeeper/exibicao/select?q=id_revel:(96_667+96_1953+96_1908+96_2068+27_1954+27_1826+27_1909+327_1866+1_435+1_2113+19_408+18_2214+20_2077+20_2091+28_1987+133_1004+133_858+133_545+133_1044+133_1420+133_1656+133_1292+319_1642+302_1177+161_2063+16_1868+16_1940+14_1899+46_2063+46_2084+46_2089+46_2091+46_2142)&wt=json&rows=1000000&start=0&sort=id_canal+asc,dh_inicio+asc&fl=dh_fim dh_inicio st_titulo titulo id_programa id_canal id_cidade diretor elenco genero"
     start_date = datetime.now(timezone.utc)
     end_date = start_date + timedelta(days=5)
     
@@ -82,7 +82,8 @@ def convert_to_xml(json_data):
         "327_1866": "Globo Nordeste",
         "96_2068": "TV Verdes Mares",
         "96_1908": "TV Cidade",
-        "96_1953": "TV Jangadeiro"
+        "96_1953": "TV Jangadeiro",
+        "96_667": "TV Diario CE"
         
         
         
@@ -150,6 +151,7 @@ if __name__ == "__main__":
     xml_tree = convert_to_xml(json_data)
     save_xml(xml_tree)
     print("XML salvo como clarotv.xml")
+
 
 
 
