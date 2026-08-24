@@ -162329,18 +162329,6 @@
     </credits>
     <category>Variedades</category>
   </programme>
-  <programme start="202609010000 -0300" stop="202609010100 -0300" channel="TV Sorocaba">
-    <title lang="pt">The Noite com Danilo Gentili</title>
-    <desc lang="pt">O programa traz muitos entrevistados interessantes e alto índice de piadas por minuto, abordando os fatos mais e menos relevantes do dia.</desc>
-    <credits>
-      <director>João Mesquita</director>
-      <actor>Léo Lins</actor>
-      <actor>Murilo Couto</actor>
-      <actor>Juliana Oliveira</actor>
-      <actor>Ultraje a Rigor</actor>
-    </credits>
-    <category>Variedades</category>
-  </programme>
   <programme start="202609010000 -0300" stop="202609010100 -0300" channel="SBT RS">
     <title lang="pt">The Noite com Danilo Gentili</title>
     <desc lang="pt">O programa traz muitos entrevistados interessantes e alto índice de piadas por minuto, abordando os fatos mais e menos relevantes do dia.</desc>
@@ -162353,11 +162341,15 @@
     </credits>
     <category>Variedades</category>
   </programme>
-  <programme start="202609010100 -0300" stop="202609010130 -0300" channel="TV Sorocaba">
-    <title lang="pt">Operação Mesquita</title>
-    <desc lang="pt">Operação Mesquita se propõe a descobrir o lado B dos famosos. E também de anônimos. O grande diferencial da atração é a ausência de estúdio: todo o programa é feito sobre rodas; os passantes fazem às vezes de auditório.</desc>
+  <programme start="202609010000 -0300" stop="202609010100 -0300" channel="TV Sorocaba">
+    <title lang="pt">The Noite com Danilo Gentili</title>
+    <desc lang="pt">O programa traz muitos entrevistados interessantes e alto índice de piadas por minuto, abordando os fatos mais e menos relevantes do dia.</desc>
     <credits>
-      <actor>Otávio Mesquita</actor>
+      <director>João Mesquita</director>
+      <actor>Léo Lins</actor>
+      <actor>Murilo Couto</actor>
+      <actor>Juliana Oliveira</actor>
+      <actor>Ultraje a Rigor</actor>
     </credits>
     <category>Variedades</category>
   </programme>
@@ -162369,9 +162361,12 @@
     </credits>
     <category>Variedades</category>
   </programme>
-  <programme start="202609010130 -0300" stop="202609010200 -0300" channel="TV Sorocaba">
-    <title lang="pt">Passe de Milhões</title>
-    <credits/>
+  <programme start="202609010100 -0300" stop="202609010130 -0300" channel="TV Sorocaba">
+    <title lang="pt">Operação Mesquita</title>
+    <desc lang="pt">Operação Mesquita se propõe a descobrir o lado B dos famosos. E também de anônimos. O grande diferencial da atração é a ausência de estúdio: todo o programa é feito sobre rodas; os passantes fazem às vezes de auditório.</desc>
+    <credits>
+      <actor>Otávio Mesquita</actor>
+    </credits>
     <category>Variedades</category>
   </programme>
   <programme start="202609010130 -0300" stop="202609010200 -0300" channel="SBT RS">
@@ -162379,24 +162374,29 @@
     <credits/>
     <category>Variedades</category>
   </programme>
-  <programme start="202609010200 -0300" stop="202609010600 -0300" channel="TV Sorocaba">
-    <title lang="pt">SBT Notícias</title>
+  <programme start="202609010130 -0300" stop="202609010200 -0300" channel="TV Sorocaba">
+    <title lang="pt">Passe de Milhões</title>
     <credits/>
-    <category>Jornalismo</category>
+    <category>Variedades</category>
   </programme>
   <programme start="202609010200 -0300" stop="202609010600 -0300" channel="SBT RS">
     <title lang="pt">SBT Notícias</title>
     <credits/>
     <category>Jornalismo</category>
   </programme>
-  <programme start="202609010600 -0300" stop="202609010700 -0300" channel="TV Sorocaba">
+  <programme start="202609010200 -0300" stop="202609010600 -0300" channel="TV Sorocaba">
+    <title lang="pt">SBT Notícias</title>
+    <credits/>
+    <category>Jornalismo</category>
+  </programme>
+  <programme start="202609010600 -0300" stop="202609010830 -0300" channel="SBT RS">
     <title lang="pt">Se Liga Brasil</title>
     <credits>
       <actor>Thiago Gardinali</actor>
     </credits>
     <category>Jornalismo</category>
   </programme>
-  <programme start="202609010600 -0300" stop="202609010830 -0300" channel="SBT RS">
+  <programme start="202609010600 -0300" stop="202609010700 -0300" channel="TV Sorocaba">
     <title lang="pt">Se Liga Brasil</title>
     <credits>
       <actor>Thiago Gardinali</actor>
@@ -162416,19 +162416,13 @@
     </credits>
     <category>Jornalismo</category>
   </programme>
-  <programme start="202609010830 -0300" stop="202609011045 -0300" channel="TV Sorocaba">
-    <title lang="pt">Primeiro Impacto</title>
-    <desc lang="pt">Um formato original da emissora americana Univision, o jornal abordará as principais pautas do Brasil e do mundo.</desc>
-    <credits/>
-    <category>Jornalismo</category>
-  </programme>
   <programme start="202609010830 -0300" stop="202609011045 -0300" channel="SBT RS">
     <title lang="pt">Primeiro Impacto</title>
     <desc lang="pt">Um formato original da emissora americana Univision, o jornal abordará as principais pautas do Brasil e do mundo.</desc>
     <credits/>
     <category>Jornalismo</category>
   </programme>
-  <programme start="202609011045 -0300" stop="202609011215 -0300" channel="TV Sorocaba">
+  <programme start="202609010830 -0300" stop="202609011045 -0300" channel="TV Sorocaba">
     <title lang="pt">Primeiro Impacto</title>
     <desc lang="pt">Um formato original da emissora americana Univision, o jornal abordará as principais pautas do Brasil e do mundo.</desc>
     <credits/>
@@ -162437,6 +162431,12 @@
   <programme start="202609011045 -0300" stop="202609011310 -0300" channel="SBT RS">
     <title lang="pt">SBT Rio Grande</title>
     <desc lang="pt">Jornal matutino com muita informação do transito da capital gaucha, condições dos aeroportos, previsão do tempo, e os principais acontecimentos do dia.</desc>
+    <credits/>
+    <category>Jornalismo</category>
+  </programme>
+  <programme start="202609011045 -0300" stop="202609011215 -0300" channel="TV Sorocaba">
+    <title lang="pt">Primeiro Impacto</title>
+    <desc lang="pt">Um formato original da emissora americana Univision, o jornal abordará as principais pautas do Brasil e do mundo.</desc>
     <credits/>
     <category>Jornalismo</category>
   </programme>
@@ -162482,18 +162482,6 @@
     </credits>
     <category>Séries</category>
   </programme>
-  <programme start="202609011400 -0300" stop="202609011500 -0300" channel="TV Sorocaba">
-    <title lang="pt">A Desalmada</title>
-    <credits>
-      <director>José Alberto Castro</director>
-      <actor>Livia Brito</actor>
-      <actor>José Ron</actor>
-      <actor>Eduardo Santamarina</actor>
-      <actor>Marlene Favela</actor>
-      <actor>Sergio Basáñez</actor>
-    </credits>
-    <category>Variedades</category>
-  </programme>
   <programme start="202609011400 -0300" stop="202609011500 -0300" channel="SBT RS">
     <title lang="pt">A Desalmada</title>
     <credits>
@@ -162506,17 +162494,15 @@
     </credits>
     <category>Variedades</category>
   </programme>
-  <programme start="202609011500 -0300" stop="202609011545 -0300" channel="TV Sorocaba">
-    <title lang="pt">Fofocalizando</title>
-    <desc lang="pt">Em um formato remodelado, o Fofocalizando chega às suas tardes com informação e as principais fofocas do mundo dos famosos.</desc>
+  <programme start="202609011400 -0300" stop="202609011500 -0300" channel="TV Sorocaba">
+    <title lang="pt">A Desalmada</title>
     <credits>
-      <director>Márcio Esquilo</director>
-      <actor>Chris Flores</actor>
-      <actor>Gabriel Cartolano</actor>
-      <actor>Flor Fernandez</actor>
-      <actor>Gaby Cabrini</actor>
-      <actor>Leo Dias</actor>
-      <actor>Isabele Benito</actor>
+      <director>José Alberto Castro</director>
+      <actor>Livia Brito</actor>
+      <actor>José Ron</actor>
+      <actor>Eduardo Santamarina</actor>
+      <actor>Marlene Favela</actor>
+      <actor>Sergio Basáñez</actor>
     </credits>
     <category>Variedades</category>
   </programme>
@@ -162534,10 +162520,18 @@
     </credits>
     <category>Variedades</category>
   </programme>
-  <programme start="202609011545 -0300" stop="202609011800 -0300" channel="TV Sorocaba">
-    <title lang="pt">Programação do Canal</title>
-    <desc lang="pt">Sinopse não Disponível.</desc>
-    <credits/>
+  <programme start="202609011500 -0300" stop="202609011545 -0300" channel="TV Sorocaba">
+    <title lang="pt">Fofocalizando</title>
+    <desc lang="pt">Em um formato remodelado, o Fofocalizando chega às suas tardes com informação e as principais fofocas do mundo dos famosos.</desc>
+    <credits>
+      <director>Márcio Esquilo</director>
+      <actor>Chris Flores</actor>
+      <actor>Gabriel Cartolano</actor>
+      <actor>Flor Fernandez</actor>
+      <actor>Gaby Cabrini</actor>
+      <actor>Leo Dias</actor>
+      <actor>Isabele Benito</actor>
+    </credits>
     <category>Variedades</category>
   </programme>
   <programme start="202609011545 -0300" stop="202609011800 -0300" channel="SBT RS">
@@ -162546,17 +162540,23 @@
     <credits/>
     <category>Variedades</category>
   </programme>
+  <programme start="202609011545 -0300" stop="202609011800 -0300" channel="TV Sorocaba">
+    <title lang="pt">Programação do Canal</title>
+    <desc lang="pt">Sinopse não Disponível.</desc>
+    <credits/>
+    <category>Variedades</category>
+  </programme>
+  <programme start="202609011800 -0300" stop="202609011915 -0300" channel="SBT RS">
+    <title lang="pt">SBT Rio Grande - 2º Edição</title>
+    <credits/>
+    <category>Jornalismo</category>
+  </programme>
   <programme start="202609011800 -0300" stop="202609011850 -0300" channel="TV Sorocaba">
     <title lang="pt">SBT Cidades</title>
     <credits>
       <actor>Rodrigo Bocardi</actor>
       <actor>Érica Reis</actor>
     </credits>
-    <category>Jornalismo</category>
-  </programme>
-  <programme start="202609011800 -0300" stop="202609011915 -0300" channel="SBT RS">
-    <title lang="pt">SBT Rio Grande - 2º Edição</title>
-    <credits/>
     <category>Jornalismo</category>
   </programme>
   <programme start="202609011850 -0300" stop="202609011905 -0300" channel="TV Sorocaba">
@@ -162587,15 +162587,6 @@
     </credits>
     <category>Jornalismo</category>
   </programme>
-  <programme start="202609011945 -0300" stop="202609012045 -0300" channel="TV Sorocaba">
-    <title lang="pt">SBT Brasil</title>
-    <desc lang="pt">Os principais fatos do Brasil e do mundo apresentados com independência e isenção.</desc>
-    <credits>
-      <director>José Occhiuso</director>
-      <actor>César Filho</actor>
-    </credits>
-    <category>Jornalismo</category>
-  </programme>
   <programme start="202609011945 -0300" stop="202609012045 -0300" channel="SBT RS">
     <title lang="pt">SBT Brasil</title>
     <desc lang="pt">Os principais fatos do Brasil e do mundo apresentados com independência e isenção.</desc>
@@ -162605,15 +162596,14 @@
     </credits>
     <category>Jornalismo</category>
   </programme>
-  <programme start="202609012045 -0300" stop="202609012115 -0300" channel="TV Sorocaba">
-    <title lang="pt">A História de Joana - A Virgem</title>
+  <programme start="202609011945 -0300" stop="202609012045 -0300" channel="TV Sorocaba">
+    <title lang="pt">SBT Brasil</title>
+    <desc lang="pt">Os principais fatos do Brasil e do mundo apresentados com independência e isenção.</desc>
     <credits>
-      <director>Rolando Ocampo, Luis Manzo, Carlos Santos</director>
-      <actor>Camila Valero</actor>
-      <actor>Brandon Peniche</actor>
-      <actor>Fabiola Guajardo</actor>
+      <director>José Occhiuso</director>
+      <actor>César Filho</actor>
     </credits>
-    <category>Variedades</category>
+    <category>Jornalismo</category>
   </programme>
   <programme start="202609012045 -0300" stop="202609012115 -0300" channel="SBT RS">
     <title lang="pt">A História de Joana - A Virgem</title>
@@ -162625,10 +162615,14 @@
     </credits>
     <category>Variedades</category>
   </programme>
-  <programme start="202609012115 -0300" stop="202609012315 -0300" channel="TV Sorocaba">
-    <title lang="pt">Programação do Canal</title>
-    <desc lang="pt">Sinopse não Disponível.</desc>
-    <credits/>
+  <programme start="202609012045 -0300" stop="202609012115 -0300" channel="TV Sorocaba">
+    <title lang="pt">A História de Joana - A Virgem</title>
+    <credits>
+      <director>Rolando Ocampo, Luis Manzo, Carlos Santos</director>
+      <actor>Camila Valero</actor>
+      <actor>Brandon Peniche</actor>
+      <actor>Fabiola Guajardo</actor>
+    </credits>
     <category>Variedades</category>
   </programme>
   <programme start="202609012115 -0300" stop="202609012315 -0300" channel="SBT RS">
@@ -162637,7 +162631,13 @@
     <credits/>
     <category>Variedades</category>
   </programme>
-  <programme start="202609012315 -0300" stop="202609020000 -0300" channel="TV Sorocaba">
+  <programme start="202609012115 -0300" stop="202609012315 -0300" channel="TV Sorocaba">
+    <title lang="pt">Programação do Canal</title>
+    <desc lang="pt">Sinopse não Disponível.</desc>
+    <credits/>
+    <category>Variedades</category>
+  </programme>
+  <programme start="202609012315 -0300" stop="202609020015 -0300" channel="SBT RS">
     <title lang="pt">Programa do Ratinho</title>
     <desc lang="pt">Ratinho preocupado com as questões da população e com um jornalismo dinâmico, traz as principais notícias do dia. Não perca o Exame de DNA, o Jornal Rational e o Desafio do Ratinho com convidados especiais.</desc>
     <credits>
@@ -162653,7 +162653,7 @@
     </credits>
     <category>Variedades</category>
   </programme>
-  <programme start="202609012315 -0300" stop="202609020015 -0300" channel="SBT RS">
+  <programme start="202609012315 -0300" stop="202609020000 -0300" channel="TV Sorocaba">
     <title lang="pt">Programa do Ratinho</title>
     <desc lang="pt">Ratinho preocupado com as questões da população e com um jornalismo dinâmico, traz as principais notícias do dia. Não perca o Exame de DNA, o Jornal Rational e o Desafio do Ratinho com convidados especiais.</desc>
     <credits>
