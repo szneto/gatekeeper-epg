@@ -9,78 +9,6 @@
   <channel id="MaisFamilia">
     <display-name lang="pt">Rede Mais Família HD</display-name>
   </channel>
-  <programme channel="TOPTV" start="20260905000000 " stop="20260905010000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905010000 " stop="20260905020000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905020000 " stop="20260905030000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905030000 " stop="20260905040000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905040000 " stop="20260905050000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905050000 " stop="20260905060000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905060000 " stop="20260905070000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905070000 " stop="20260905080000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905080000 " stop="20260905090000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905090000 " stop="20260905100000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905100000 " stop="20260905110000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905110000 " stop="20260905120000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905120000 " stop="20260905130000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905130000 " stop="20260905140000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905140000 " stop="20260905150000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905150000 " stop="20260905160000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905160000 " stop="20260905170000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905170000 " stop="20260905180000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905180000 " stop="20260905190000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905190000 " stop="20260905200000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905200000 " stop="20260905210000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905210000 " stop="20260905220000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905220000 " stop="20260905230000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
-  <programme channel="TOPTV" start="20260905230000 " stop="20260906000000 ">
-    <title lang="pt">Programação TOP TV HD</title>
-  </programme>
   <programme channel="TOPTV" start="20260906000000 " stop="20260906010000 ">
     <title lang="pt">Programação TOP TV HD</title>
   </programme>
@@ -369,77 +297,77 @@
   <programme channel="TOPTV" start="20260909230000 " stop="20260910000000 ">
     <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905000000 " stop="20260905010000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910000000 " stop="20260910010000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905010000 " stop="20260905020000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910010000 " stop="20260910020000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905020000 " stop="20260905030000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910020000 " stop="20260910030000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905030000 " stop="20260905040000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910030000 " stop="20260910040000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905040000 " stop="20260905050000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910040000 " stop="20260910050000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905050000 " stop="20260905060000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910050000 " stop="20260910060000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905060000 " stop="20260905070000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910060000 " stop="20260910070000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905070000 " stop="20260905080000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910070000 " stop="20260910080000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905080000 " stop="20260905090000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910080000 " stop="20260910090000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905090000 " stop="20260905100000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910090000 " stop="20260910100000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905100000 " stop="20260905110000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910100000 " stop="20260910110000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905110000 " stop="20260905120000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910110000 " stop="20260910120000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905120000 " stop="20260905130000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910120000 " stop="20260910130000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905130000 " stop="20260905140000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910130000 " stop="20260910140000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905140000 " stop="20260905150000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910140000 " stop="20260910150000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905150000 " stop="20260905160000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910150000 " stop="20260910160000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905160000 " stop="20260905170000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910160000 " stop="20260910170000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905170000 " stop="20260905180000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910170000 " stop="20260910180000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905180000 " stop="20260905190000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910180000 " stop="20260910190000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905190000 " stop="20260905200000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910190000 " stop="20260910200000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905200000 " stop="20260905210000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910200000 " stop="20260910210000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905210000 " stop="20260905220000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910210000 " stop="20260910220000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905220000 " stop="20260905230000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910220000 " stop="20260910230000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
-  <programme channel="TVT" start="20260905230000 " stop="20260906000000 ">
-    <title lang="pt">Programação TVT HD</title>
+  <programme channel="TOPTV" start="20260910230000 " stop="20260911000000 ">
+    <title lang="pt">Programação TOP TV HD</title>
   </programme>
   <programme channel="TVT" start="20260906000000 " stop="20260906010000 ">
     <title lang="pt">Programação TVT HD</title>
@@ -729,77 +657,77 @@
   <programme channel="TVT" start="20260909230000 " stop="20260910000000 ">
     <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905000000 " stop="20260905010000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910000000 " stop="20260910010000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905010000 " stop="20260905020000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910010000 " stop="20260910020000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905020000 " stop="20260905030000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910020000 " stop="20260910030000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905030000 " stop="20260905040000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910030000 " stop="20260910040000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905040000 " stop="20260905050000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910040000 " stop="20260910050000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905050000 " stop="20260905060000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910050000 " stop="20260910060000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905060000 " stop="20260905070000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910060000 " stop="20260910070000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905070000 " stop="20260905080000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910070000 " stop="20260910080000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905080000 " stop="20260905090000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910080000 " stop="20260910090000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905090000 " stop="20260905100000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910090000 " stop="20260910100000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905100000 " stop="20260905110000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910100000 " stop="20260910110000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905110000 " stop="20260905120000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910110000 " stop="20260910120000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905120000 " stop="20260905130000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910120000 " stop="20260910130000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905130000 " stop="20260905140000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910130000 " stop="20260910140000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905140000 " stop="20260905150000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910140000 " stop="20260910150000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905150000 " stop="20260905160000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910150000 " stop="20260910160000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905160000 " stop="20260905170000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910160000 " stop="20260910170000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905170000 " stop="20260905180000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910170000 " stop="20260910180000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905180000 " stop="20260905190000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910180000 " stop="20260910190000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905190000 " stop="20260905200000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910190000 " stop="20260910200000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905200000 " stop="20260905210000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910200000 " stop="20260910210000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905210000 " stop="20260905220000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910210000 " stop="20260910220000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905220000 " stop="20260905230000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910220000 " stop="20260910230000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
-  <programme channel="MaisFamilia" start="20260905230000 " stop="20260906000000 ">
-    <title lang="pt">Programação Rede Mais Família HD</title>
+  <programme channel="TVT" start="20260910230000 " stop="20260911000000 ">
+    <title lang="pt">Programação TVT HD</title>
   </programme>
   <programme channel="MaisFamilia" start="20260906000000 " stop="20260906010000 ">
     <title lang="pt">Programação Rede Mais Família HD</title>
@@ -1087,6 +1015,78 @@
     <title lang="pt">Programação Rede Mais Família HD</title>
   </programme>
   <programme channel="MaisFamilia" start="20260909230000 " stop="20260910000000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910000000 " stop="20260910010000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910010000 " stop="20260910020000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910020000 " stop="20260910030000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910030000 " stop="20260910040000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910040000 " stop="20260910050000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910050000 " stop="20260910060000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910060000 " stop="20260910070000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910070000 " stop="20260910080000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910080000 " stop="20260910090000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910090000 " stop="20260910100000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910100000 " stop="20260910110000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910110000 " stop="20260910120000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910120000 " stop="20260910130000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910130000 " stop="20260910140000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910140000 " stop="20260910150000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910150000 " stop="20260910160000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910160000 " stop="20260910170000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910170000 " stop="20260910180000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910180000 " stop="20260910190000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910190000 " stop="20260910200000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910200000 " stop="20260910210000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910210000 " stop="20260910220000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910220000 " stop="20260910230000 ">
+    <title lang="pt">Programação Rede Mais Família HD</title>
+  </programme>
+  <programme channel="MaisFamilia" start="20260910230000 " stop="20260911000000 ">
     <title lang="pt">Programação Rede Mais Família HD</title>
   </programme>
 </tv>
